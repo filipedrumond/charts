@@ -17,19 +17,32 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="app">
       <div class="d-flex justify-content-center">
         <h1>GRÁFICOS</h1>
       </div>
-      <div class="row" id="app">
+      <div class="d-flex">
+        <div class="form-group">
+          <input type="text" class="form-control" v-model="temp[0]">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" v-model="temp[1]">
+        </div>
+      </div>
+      <button @click="adicionarItem(temp)">ADICIONAR</button>
+      <button @click="generateChart(items)">GERAR</button>
+      {{temp}}
+      <div class="row" >
         <table class="table">
           <tr>
             <th>DATA</th>
             <th>VALOR</th>
             <th>ACAO</th>
           </tr>
-          <tr>
-            <td>{{ message }}</td>
+          <tr v-for="item in items">
+            <td>{{item[0]}}</td>
+            <td>{{item[1]}}</td>
+            <td><button></button></td>
           </tr>
         </table>
       </div>
