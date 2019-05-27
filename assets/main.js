@@ -1,10 +1,4 @@
 var app = new Vue({
-<<<<<<< HEAD
-  el: "#apkkp",
-  data: {
-    message: "Hello Vue!",
-    items: []
-=======
   el: "#app",
   data: function () {
     return {
@@ -15,7 +9,6 @@ var app = new Vue({
         0.00
       ],
     }
->>>>>>> master
   },
   methods: {
     adicionarItem: function(item){
